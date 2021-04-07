@@ -59,8 +59,8 @@ Chess has always been one of the most heavily studied applications of machine le
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Results</h3>
 <p>The accuracy of our Naive Bayes baseline for different rating range sizes is displayed in the “Naive Bayes Accuracy” graph. The classifier consistently outperforms random predictions, as it has a 56% accuracy across 4 classes (range 500), a 43% across 7 classes (range 300), etc. Additionally, the relative accuracy of each feature is shown in the “Individual Feature Accuracies” graph. We see that they all perform at around the same accuracy, and that the best classifier is the full Naive Bayes that takes into account all three features.
 </p>
-<img src="images/Naive_Bayes_Accuracy.PNG" style="float: left; width: 150px; height: auto;" id="naive-bayes-accuracy" class="graph">
-<img src="images/Feature_Accuracies.PNG" style="float: right; width: 150px; height: auto;" id="feature-accuracies" class="graph">
+<img src="images/Naive_Bayes_Accuracy.PNG" style="width: 300px; height: auto;" id="naive-bayes-accuracy" class="graph">
+<img src="images/Feature_Accuracies.PNG" style="float: right; width: 300px; height: auto;" id="feature-accuracies" class="graph">
 <p>However, the Naive Bayes classifier was predominantly simply guessing whichever rating had the highest percentage of players. The individual label data shows that the classifier predicted that almost all of the players were rated 1800, neglected to classify players as less than 1500 or greater than 2100, and also rated very few players 2100 despite its significant representation in the test set.
 </p>
 <img src="images/Individual_Label_Accuracy.png">
