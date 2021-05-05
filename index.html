@@ -83,7 +83,7 @@ Chess has always been one of the most heavily studied applications of machine le
 	      <p>
 		      	As expected, the loss increases and the accuracy decreases as the size of each rating range decreases. With only two classes, the training accuracy was nearly 80%, but this number decreased to around 50% with eight classes. Still, these accuracies are higher than our Naive Bayes baseline model. Additionally, it is important to note that the test loss is always larger than the training loss and the test accuracy is always lower than the training accuracy. This is evidence of overfitting, and we attempted to mitigate this issue by tuning hyperparameters, beginning with the number of epochs. The following plots show the training and test accuracies and the training and test loss values for different numbers of training epochs.
 	      </p>
-	      <img src="images/RNN_Different_Num_Epochs_Line.PNG" style="display: block; margin-left: auto; margin-right: auto; width: 1000%;">
+	      <img src="images/RNN_Different_Num_Epochs_Line.PNG" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
 	      <p>
 		      	These plots show definite evidence of overfitting as the test loss stays largely the same as the number of epochs increases and the training loss decreases. This means that the model was learning the training dataset too closely, improving its accuracy for those data points specifically while performing worse on outside data.
 	      </p><br><br>
