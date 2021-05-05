@@ -71,7 +71,7 @@ Chess has always been one of the most heavily studied applications of machine le
 <img src="images/Feature_Accuracies.PNG" style="float: right; width: 300px; height: auto;" id="feature-accuracies" class="graph">
 <p>However, the Naive Bayes classifier was predominantly simply guessing whichever rating had the highest percentage of players. The individual label data shows that the classifier predicted that almost all of the players were rated 1800, neglected to classify players as less than 1500 or greater than 2100, and also rated very few players 2100 despite its significant representation in the test set.
 </p>
-<img src="images/Individual_Label_Accuracy.png" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+<img src="images/Individual_Label_Accuracy.png" style="display: block; margin-left: auto; margin-right: auto; width: 75%;">
 <p> This isn’t unexpected as the Naive Bayes classifier takes prior probability heavily into account. However, because each feature offers so little information, the classifier over-values prior probability. These results are subpar, mostly because a Naive Bayes classifier is not the ideal solution for this kind of problem, but also because the features didn’t provide enough information to overcome the weight of the prior probabilities. Utilizing the RNN should drastically increase the accuracy of classification.
 </p>
 <h3>
@@ -79,11 +79,11 @@ Chess has always been one of the most heavily studied applications of machine le
 	      <p>
 		      	The new results from the RNN could certainly be improved upon. Unless otherwise stated, the data presented is for an RNN model containing only one LSTM layer with 100 hidden states. The following plots compare the training and testing accuracy as well as the training and testing loss for different numbers of rating ranges. Each range is calculated with 2800 as the maximum rating; for example, for 4 ranges, the classes will be 1-700, 701-1400, 1401-2100, and 2101-2800.
 	      </p>
-	      <img src="images/RNN_Different_Ranges_Line.png" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+	      <img src="images/RNN_Different_Ranges_Line.PNG" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
 	      <p>
 		      	As expected, the loss increases and the accuracy decreases as the size of each rating range decreases. With only two classes, the training accuracy was nearly 80%, but this number decreased to around 50% with eight classes. Still, these accuracies are higher than our Naive Bayes baseline model. Additionally, it is important to note that the test loss is always larger than the training loss and the test accuracy is always lower than the training accuracy. This is evidence of overfitting, and we attempted to mitigate this issue by tuning hyperparameters, beginning with the number of epochs. The following plots show the training and test accuracies and the training and test loss values for different numbers of training epochs.
 	      </p>
-	      <img src="images/RNN_Different_Num_Epochs_Line.png" style="display: block; margin-left: auto; margin-right: auto; width: 1000%;">
+	      <img src="images/RNN_Different_Num_Epochs_Line.PNG" style="display: block; margin-left: auto; margin-right: auto; width: 1000%;">
 	      <p>
 		      	These plots show definite evidence of overfitting as the test loss stays largely the same as the number of epochs increases and the training loss decreases. This means that the model was learning the training dataset too closely, improving its accuracy for those data points specifically while performing worse on outside data.
 	      </p><br><br>
